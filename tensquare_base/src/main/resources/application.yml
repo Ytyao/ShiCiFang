@@ -1,0 +1,14 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: tensquare_base #服务名称
+  datasource:
+    url: jdbc:mysql://localhost:3306/tensquare_base?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource.url=jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8
+#  spring.datasource.username=root
+#  spring.datasource.password=root
+#  spring.datasource.driver-class-name=com.mysql.jdbc.Driver
