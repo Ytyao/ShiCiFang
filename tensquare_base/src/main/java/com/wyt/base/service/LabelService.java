@@ -79,6 +79,11 @@ public class LabelService {
         labelDao.deleteById(id);
     }
 
+    /**
+     * 分页条件查询
+     * @param label
+     * @return
+     */
     public List<Label> findSearch(Label label) {
         return labelDao.findAll(new Specification<Label>() {
             @Override
@@ -100,6 +105,13 @@ public class LabelService {
         });
     }
 
+    /**
+     * 条件+分页
+     * @param label
+     * @param page
+     * @param size
+     * @return
+     */
     public Page<Label> pageQuery(Label label, int page, int size) {
         //封装了一个分页对象，在springdataJap中想要实现，直接传一个分页对象
         Pageable pageable = PageRequest.of(page - 1, size);
