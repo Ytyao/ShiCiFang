@@ -32,13 +32,6 @@ public class RecruitService {
 	@Autowired
 	private IdWorker idWorker;
 
-	public List<Recruit> findTop6ByStateOrderByCreatetime(){
-		return recruitDao.findTop6ByStateOrderByCreatetimeDesc("2");
-	}
-
-	public List<Recruit> findTop6ByStateNotOrderByCreatetimeDesc(){
-		return recruitDao.findTop6ByStateNotOrderByCreatetimeDesc("0");
-	}
 	/**
 	 * 查询全部列表
 	 * @return

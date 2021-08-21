@@ -21,17 +21,6 @@ public class RecruitController {
 	@Autowired
 	private RecruitService recruitService;
 
-	@RequestMapping(value = "/search/recommend",method= RequestMethod.GET)
-	public Result recommend(){
-		List<Recruit> list = recruitService.findTop6ByStateOrderByCreatetime();
-		return new Result(true, StatusCode.OK, "查询成功", list);
-	}
-
-	@RequestMapping(value = "/search/newlist",method= RequestMethod.GET)
-	public Result newlist(){
-		List<Recruit> list = recruitService.findTop6ByStateNotOrderByCreatetimeDesc();
-		return new Result(true, StatusCode.OK, "查询成功", list);
-	}
 
 	/**
 	 * 查询全部数据

@@ -12,7 +12,4 @@ import java.util.List;
  *
  */
 public interface RecruitDao extends JpaRepository<Recruit,String>,JpaSpecificationExecutor<Recruit>{
-	public List<Recruit> findTop6ByStateOrderByCreatetimeDesc(String state);
-
-	public List<Recruit> findTop6ByStateNotOrderByCreatetimeDesc(String state);
 }
