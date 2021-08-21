@@ -34,7 +34,9 @@ public class EnterpriseService {
 	@Autowired
 	private IdWorker idWorker;
 
-
+	public List<Enterprise> hotlist(){
+		return enterpriseDao.findByIshot("1");
+	}
 
 	/**
 	 * 查询全部列表
@@ -44,7 +46,6 @@ public class EnterpriseService {
 		return enterpriseDao.findAll();
 	}
 
-	
 	/**
 	 * 条件查询+分页
 	 * @param whereMap
@@ -57,7 +58,6 @@ public class EnterpriseService {
 		PageRequest pageRequest =  PageRequest.of(page-1, size);
 		return enterpriseDao.findAll(specification, pageRequest);
 	}
-
 	
 	/**
 	 * 条件查询

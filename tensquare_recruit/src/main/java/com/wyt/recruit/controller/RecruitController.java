@@ -1,9 +1,7 @@
 package com.wyt.recruit.controller;
-import com.tensquare.recruit.pojo.Recruit;
-import com.tensquare.recruit.service.RecruitService;
-import entity.PageResult;
-import entity.Result;
-import entity.StatusCode;
+import com.wyt.common.entity.*;
+import com.wyt.recruit.pojo.Recruit;
+import com.wyt.recruit.service.RecruitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
